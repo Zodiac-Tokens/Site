@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zodiac Tokens - 100% Community Owned Zodiac Signs Crypto Tokens</title>
+    <title>Zodiac Tokens - 100% Community Owned Crypto Tokens</title>
     <meta name="theme-color" content="#001321">
 
+    <meta name="description" content="100% Community Owned Zodiac Signs Crypto Tokens">
     <meta property="og:title" content="Zodiac Tokens">
     <meta property="og:description" content="100% Community Owned Zodiac Signs Crypto Tokens">
     <meta property="og:image" content="/content/img/social_meta.png">
@@ -22,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/content/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/content/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/content/img/favicon-16x16.png">
-    <link rel="stylesheet" href="/content/zodiac.css"/>
+    <link rel="stylesheet" href="/content/zodiac.css" />
 </head>
 <body>
     <header>
@@ -321,7 +322,7 @@
                     <p>
                         The entire supply of each token is locked in a Uniswap Liquidity Pool and all corresponding LP tokens are burned forever. No allocation to billionaire investors or special treatment for founders. Everyone buys from decentralized exchanges which means a fair launch with no risk for rug pulls and bad actors.
                         <br />
-                        <a href="">View LP token burns on Etherscan</a>
+                        <a href="https://etherscan.io/address/0x8e0f59c46e1d5934c5793cab44a045d1ff55c7a2#tokentxns">View LP token burns on Etherscan</a>
                     </p>
                 </div>
             </div>
@@ -753,10 +754,10 @@
         // c: Market Cap
         // p: Percentage
     var comparison = [
-        {m: 4, c: 75000, p: 75},
-        {m: 1, c: 60000, p: 60},
-        {m: 10, c: 42000, p: 42},
-        {m: 7, c: 34000, p: 34},
+        {m: 10, c: 3800, p: 100},
+        {m: 1, c: 3500, p: 63},
+        {m: 7, c: 3350, p: 44},
+        {m: 4, c: 3200, p: 25},
         {m: 2, c: -1, p: -1},
         {m: 3, c: -1, p: -1},
         {m: 5, c: -1, p: -1},
@@ -831,7 +832,7 @@
             var sign = getSign(e.m);
             if (e.c > 0) {
                 $('#' + sign).css('order', i);
-                $('#' + sign).find('span.hint').text('MCap: ' + e.c);
+                $('#' + sign).find('span.hint').text('MCap: $' + e.c);
                 $('#' + sign).find('progress').val(e.p);
             } else {
                 $('#' + sign).css('order', 10 + i);
