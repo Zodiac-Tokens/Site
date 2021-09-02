@@ -70,6 +70,32 @@ select {
 	visibility: hidden;
 }
 
+span.tag {
+	padding: 2px 4px;
+	margin-left: 5px;
+	background-color: $background;
+	color: white;
+	border-radius: 4px;
+	font-size: 0.75rem;
+	vertical-align: middle;
+
+	&.fire {
+		background-color: #d52f38;
+	}
+
+	&.air {
+		background-color: #d8a927;
+	}
+
+	&.earth {
+		background-color: #398d30;
+	}
+
+	&.water {
+		background-color: #2b6fad;
+	}
+}
+
 .dialog_base {
 	visibility: hidden;
 	display: flex;
@@ -93,14 +119,14 @@ select {
 }
 
 .dialog {
-	display: flex;
-	flex-direction: column;
 	display: none;
+	margin: 0 10px;
 	padding: 5px 10px;
-	height: 100%;
-	max-height: 100%;
+	max-height: 85%;
 	opacity: 0;
 	background-color: $section;
+	border-radius: 4px;
+	box-shadow: $shadow-z2;
 	transition: opacity 200ms;
 
 	&_header {
@@ -119,6 +145,8 @@ select {
 		word-wrap: break-word;
 
 		& > ol {
+			margin-top: 5px;
+			margin-bottom: 5px;
 			padding-inline-start: 25px;
 
 			& h4 {
@@ -139,11 +167,6 @@ select {
 					color: #c6d8e6;
 					background-color: #002e53;
 				}
-
-				&.multi {
-					display: inline-block;
-					margin-bottom: 5px;
-				}
 			}
 
 			& > li:not(:last-child) {
@@ -153,12 +176,32 @@ select {
 	}
 
 	&_footer {
-		padding-bottom: 5px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		text-align: center;
+
+		& > a {
+			display: inline-block;
+			padding: 7px 15px;
+			background-color: $hint;
+			border: 1px solid $hint;
+			border-radius: 4px;
+			color: $background;
+			text-decoration: none;
+			font-size: 1.25rem;
+			transition: color 200ms, border-color 200ms, background-color 200ms;
+
+			&:hover,
+			&:active {
+				background-color: $body;
+				border-color: $body;
+			}
+		}
 	}
 
 	&.visible {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		opacity: 100%;
 	}
 }
@@ -218,17 +261,27 @@ header {
 		margin: 0 auto;
 		padding: 0 10px;
 
-		& > img {
-			display: block;
-			width: 40px;
-			height: 40px;
+		& > a {
+			display: inline-flex;
+			flex-direction: row;
+			align-items: center;
+			text-decoration: none;
+
+			& > img {
+				display: block;
+				width: 40px;
+				height: 40px;
+			}
+
+			& > h2 {
+				margin-left: 10px;
+				margin-right: 10px;
+				color: $body;
+			}
 		}
 
-		& > h2 {
+		& > div#nav_spacer {
 			flex: 1;
-			margin-left: 10px;
-			margin-right: 10px;
-			color: $body;
 		}
 
 		& > nav {
@@ -418,7 +471,7 @@ section.hero {
 			}
 
 			& > #hero_moon {
-				top: 45%;
+				bottom: 20%;
 				left: 9%;
 				width: 90px;
 				height: 90px;
@@ -434,7 +487,7 @@ section.hero {
 		flex-wrap: wrap;
 		margin-left: auto;
 		margin-right: auto;
-		padding: 80px 10px 10px 10px;
+		padding: 60px 10px 10px 10px;
 		max-width: 1300px;
 		z-index: 10;
 
@@ -448,6 +501,10 @@ section.hero {
 				& > h1,
 				& > h2 {
 					filter: drop-shadow($shadow-text);
+				}
+
+				& > h2 {
+					color: $accent_dark;
 				}
 
 				& > div {
@@ -503,6 +560,7 @@ div.token {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin-bottom: 2px;
 
 	&_img > img {
 		display: block;
@@ -524,32 +582,6 @@ div.token {
 				flex: 1;
 				font-size: 1.125rem;
 				font-weight: bold;
-
-				& > span.tag {
-					padding: 2px 4px;
-					margin-left: 5px;
-					background-color: $background;
-					color: white;
-					border-radius: 4px;
-					font-size: 0.75rem;
-					vertical-align: middle;
-
-					&.fire {
-						background-color: #d52f38;
-					}
-
-					&.air {
-						background-color: #d8a927;
-					}
-
-					&.earth {
-						background-color: #398d30;
-					}
-
-					&.water {
-						background-color: #2b6fad;
-					}
-				}
 			}
 
 			& > span {
@@ -581,7 +613,7 @@ div.token {
 
 	&.soon {
 		.token_img > img {
-			opacity: 0.5;
+			opacity: 0.35;
 			filter: grayscale(1);
 		}
 
@@ -615,7 +647,7 @@ div.token {
 	& > div {
 		margin-left: auto;
 		margin-right: auto;
-		padding: 10px;
+		padding: 0 10px 30px 10px;
 		max-width: 1300px;
 	}
 
@@ -668,6 +700,7 @@ div#findout {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto auto auto auto auto;
+	padding: 30px 0;
 
 	& > #point1 {
 		grid-row-start: 1;
@@ -716,11 +749,6 @@ div#findout {
 		& > img {
 			width: 48px;
 			height: 48px;
-		}
-
-		& h4 {
-			margin: 5px 0;
-			color: $accent;
 		}
 
 		& a {
@@ -833,6 +861,7 @@ div.contract {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin-bottom: 5px;
 
 	&_img > img {
 		display: block;
@@ -849,32 +878,6 @@ div.contract {
 			display: block;
 			font-size: 1.125rem;
 			font-weight: bold;
-
-			& > span.tag {
-				padding: 2px 4px;
-				margin-left: 5px;
-				background-color: $background;
-				color: white;
-				border-radius: 4px;
-				font-size: 0.75rem;
-				vertical-align: middle;
-
-				&.fire {
-					background-color: #d52f38;
-				}
-
-				&.air {
-					background-color: #d8a927;
-				}
-
-				&.earth {
-					background-color: #398d30;
-				}
-
-				&.water {
-					background-color: #2b6fad;
-				}
-			}
 		}
 
 		& > input {
@@ -890,50 +893,79 @@ div.contract {
 		}
 	}
 
-	& button {
-		position: relative;
-		background-color: $section_alt;
-		border-color: $section_alt;
-		padding: 8px;
-		transition: all 200ms;
+	&_buttons {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 
-		&:hover,
-		&:active {
-			background-color: $elevated;
-			border-color: $elevated;
-		}
+		& > button {
+			position: relative;
+			background-color: $section_alt;
+			border-color: $section_alt;
+			padding: 8px;
+			transition: all 200ms;
 
-		& > img {
-			display: block;
-			width: 28px;
-			height: 28px;
-		}
-
-		&.done {
-			background-color: $accent;
-			border-color: $accent;
-
-			& > img {
-				opacity: 0;
+			&:hover,
+			&:active {
+				background-color: $elevated;
+				border-color: $elevated;
 			}
 
-			&::after {
-				content: '';
-				position: absolute;
-				top: 9px;
-				left: 16px;
-				width: 10px;
-				height: 18px;
-				border-bottom: 2px solid $background;
-				border-right: 2px solid $background;
-				transform: rotate(45deg);
+			& > img {
+				display: block;
+				width: 28px;
+				height: 28px;
+			}
+
+			&.done {
+				background-color: $accent;
+				border-color: $accent;
+
+				& > img {
+					opacity: 0;
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 9px;
+					left: 16px;
+					width: 10px;
+					height: 18px;
+					border-bottom: 2px solid $background;
+					border-right: 2px solid $background;
+					transform: rotate(45deg);
+				}
+			}
+		}
+
+		& > a {
+			display: inline-block;
+			position: relative;
+			margin-left: 5px;
+			background-color: $section_alt;
+			border: 1px solid $section_alt;
+			border-radius: 4px;
+			padding: 8px;
+			transition: all 200ms;
+
+			&:hover,
+			&:active {
+				background-color: $elevated;
+				border-color: $elevated;
+			}
+
+			& > img {
+				display: block;
+				width: 28px;
+				height: 28px;
 			}
 		}
 	}
 
 	&.soon {
 		.contract_img > img {
-			opacity: 0.5;
+			opacity: 0.35;
 			filter: grayscale(1);
 		}
 
@@ -941,7 +973,8 @@ div.contract {
 			opacity: 0.5;
 		}
 
-		& button {
+		& button,
+		& a {
 			display: none;
 		}
 	}
@@ -951,8 +984,11 @@ div.contract {
 	text-align: center;
 
 	& > div {
+		padding-top: 10px;
+		padding-bottom: 10px;
+
 		& > h3 {
-			margin: 5px 0 10px 0;
+			margin: 10px 0 10px 0;
 			color: $accent;
 		}
 
@@ -961,7 +997,7 @@ div.contract {
 			display: grid;
 			grid-template-columns: 25% 25% 25% 25%;
 			grid-template-rows: 1fr;
-			padding: 20px 0;
+			padding: 5px 0 10px 0;
 			max-width: 600px;
 
 			& > a {
@@ -990,10 +1026,51 @@ div.contract {
 	}
 }
 
-@supports (backdrop-filter: blur(30px)) {
+#div_buy_tokens {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 5px;
+	padding-bottom: 5px;
+
+	& > a {
+		display: block;
+		padding: 10px 5px;
+		color: $body;
+		border-radius: 4px;
+		background-color: $elevated;
+		text-decoration: none;
+		text-align: center;
+		transition: background-color 200ms;
+
+		& > img {
+			display: block;
+			margin: 0 auto;
+			width: 48px;
+			height: 48px;
+		}
+
+		& > strong {
+			display: block;
+			margin-top: 10px;
+		}
+
+		& > span {
+			display: block;
+			font-size: 0.75rem;
+			color: $hint;
+		}
+
+		&:hover,
+		&:active {
+			background-color: rgba($hint, 0.25);
+		}
+	}
+}
+
+@supports (backdrop-filter: blur(20px)) {
 	header.shadow {
-		background-color: rgba($background, 0.1);
-		backdrop-filter: blur(30px);
+		background-color: rgba($background, 0.25);
+		backdrop-filter: blur(20px);
 		transition: backdrop-filter 200ms;
 	}
 }
@@ -1026,10 +1103,7 @@ div.contract {
 	}
 
 	.dialog {
-		max-width: 600px;
-		height: auto;
-		border-radius: 4px;
-		box-shadow: $shadow-z2;
+		max-width: 800px;
 
 		&_header > h3 {
 			margin: 5px 0;
@@ -1037,15 +1111,17 @@ div.contract {
 	}
 
 	header > div {
-		& > img {
-			margin: 10px 0;
-			width: 60px;
-			height: 60px;
-		}
+		a {
+			& > img {
+				margin: 10px 0;
+				width: 60px;
+				height: 60px;
+			}
 
-		& > h2 {
-			margin-left: 10px;
-			margin-right: 10px;
+			& > h2 {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
 		}
 
 		& > nav {
@@ -1063,7 +1139,7 @@ div.contract {
 			height: 100vh;
 
 			&_elements {
-				height: 100vh;
+				height: 100%;
 
 				& > #hero_aries {
 					top: 12%;
@@ -1158,8 +1234,8 @@ div.contract {
 				}
 
 				& > #hero_moon {
-					top: 55%;
-					left: 9%;
+					bottom: 23%;
+					left: 7%;
 					width: 160px;
 					height: 160px;
 					z-index: 3;
@@ -1169,7 +1245,7 @@ div.contract {
 
 		& > .hero_content {
 			flex-wrap: nowrap;
-			padding-top: 120px;
+			padding-top: 100px;
 
 			& > div#div_hero {
 				flex: none;
@@ -1300,7 +1376,15 @@ div.contract {
 		}
 	}
 
-	#footer > div > div a {
-		font-size: 1rem;
+	#footer > div > h3 {
+		margin-top: 15px;
+	}
+
+	#footer > div > div {
+		padding: 10px 0 20px 0;
+
+		& > a {
+			font-size: 1rem;
+		}
 	}
 }

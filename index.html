@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zodiac Tokens - 100% Community Owned Zodiac Signs Crypto Tokens</title>
+    <meta name="theme-color" content="#001321">
+
+    <meta property="og:title" content="Zodiac Tokens">
+    <meta property="og:description" content="100% Community Owned Zodiac Signs Crypto Tokens">
+    <meta property="og:image" content="/content/img/social_meta.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="300">
+    <meta property="og:url" content="https://ZodiacTokens.io">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:site_name" content="Zodiac Tokens">
+    <meta name="twitter:image:alt" content="Zodiac Tokens">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/content/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/content/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/content/img/favicon-16x16.png">
@@ -13,8 +27,11 @@
 <body>
     <header>
         <div>
-            <img src="/content/img/zodiac.svg" alt="Zodiac Signs"/>
-            <h2>Zodiac Signs</h2>
+            <a href="#href_top">
+                <img src="/content/img/zodiac.svg" alt="Zodiac Tokens"/>
+                <h2>Zodiac Tokens</h2>
+            </a>
+            <div id="nav_spacer"></div>
             <nav>
                 <ul>
                     <li>
@@ -38,6 +55,7 @@
         </div>
     </header>
     <section class="hero">
+        <span id="href_top" class="hot_link">.</span>
         <img class="hero_img" src="/content/img/hero_background.svg"/>
         <div id="div_parallax" class="hero_img_elements">
             <img id="hero_aries" src="/content/img/hero_aries.svg" />
@@ -297,9 +315,9 @@
             <div id="point1">
                 <img src="/content/img/point_community.svg"/>
                 <div>
-                    <h4>
+                    <h3>
                         100% Community-owned
-                    </h4>
+                    </h3>
                     <p>
                         The entire supply of each token is locked in a Uniswap Liquidity Pool and all corresponding LP tokens are burned forever. No allocation to billionaire investors or special treatment for founders. Everyone buys from decentralized exchanges which means a fair launch with no risk for rug pulls and bad actors.
                         <br />
@@ -309,36 +327,36 @@
             </div>
             <div id="point2">
                 <img src="/content/img/point_scarce.svg"/>
-                <h4>
+                <h3>
                     Scarce Supply
-                </h4>
+                </h3>
                 <p>
                     There is only 21 million of each token - same as Bitcoin - and there will never be more of them. So each token has the potential to get to the price of at least 1 BTC!
                 </p>
             </div>
             <div id="point3">
                 <img src="/content/img/point_eco.svg"/>
-                <h4>
+                <h3>
                     Eco-friendly
-                </h4>
+                </h3>
                 <p>
                     The whole supply was minted on day one. So no mining by expensive machines that belong to super wealthy and no carbon emission!
                 </p>
             </div>
             <div id="point4">
                 <img src="/content/img/point_ether.svg"/>
-                <h4>
+                <h3>
                     Built on Ethereum
-                </h4>
+                </h3>
                 <p>
                     Leveraging the smart contracts capability of Ethereum blockchain, each Zodiac Token is an ERC-20 compliant token which means you have the whole Ethereum ecosystem at your disposal!
                 </p>
             </div>
             <div id="point5">
                 <img src="/content/img/point_secure.svg"/>
-                <h4>
+                <h3>
                     Safe and Accessible
-                </h4>
+                </h3>
                 <p>
                     The source code is verified on Etherscan and available for security checks and audits. You can safely HODL your tokens on any Ethereum wallet and trade them on popular exchanges!
                 </p>
@@ -413,13 +431,13 @@
                             <strong>Aries<span class="tag fire">Fire</span></strong>
                             <input type="text" value="0x942B70b3a9BA9B17FA59Ca0328Bc5e78728A079A" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="https://etherscan.io/token/0x942B70b3a9BA9B17FA59Ca0328Bc5e78728A079A" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract soon">
@@ -430,13 +448,13 @@
                             <strong>Taurus<span class="tag earth">Earth</span></strong>
                             <input type="text" value="Coming Soon" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract soon">
@@ -447,13 +465,13 @@
                             <strong>Gemini<span class="tag air">Air</span></strong>
                             <input type="text" value="Coming Soon" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract">
@@ -464,13 +482,13 @@
                             <strong>Cancer<span class="tag water">Water</span></strong>
                             <input type="text" value="0x363428b78e5987647A6efab8F4B9E9E4cA0acE99" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="https://etherscan.io/token/0x363428b78e5987647A6efab8F4B9E9E4cA0acE99" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract soon">
@@ -481,13 +499,13 @@
                             <strong>Leo<span class="tag fire">Fire</span></strong>
                             <input type="text" value="Coming Soon" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract soon">
@@ -498,13 +516,13 @@
                             <strong>Virgo<span class="tag earth">Earth</span></strong>
                             <input type="text" value="Coming Soon" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -517,13 +535,13 @@
                             <strong>Libra<span class="tag air">Air</span></strong>
                             <input type="text" value="0x90555daB9AFFc5c404a6F45a7441737D71199aaE" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="https://etherscan.io/token/0x90555daB9AFFc5c404a6F45a7441737D71199aaE" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract soon">
@@ -534,13 +552,13 @@
                             <strong>Scorpio<span class="tag water">Water</span></strong>
                             <input type="text" value="Coming Soon" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract soon">
@@ -551,13 +569,13 @@
                             <strong>Sagittarius<span class="tag fire">Fire</span></strong>
                             <input type="text" value="Coming Soon" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract">
@@ -568,13 +586,13 @@
                             <strong>Capricorn<span class="tag earth">Earth</span></strong>
                             <input type="text" value="0x8B516015D21770cc5A37f6fC604794CfAC63F579" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="https://etherscan.io/token/0x8B516015D21770cc5A37f6fC604794CfAC63F579" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract soon">
@@ -585,13 +603,13 @@
                             <strong>Aquarius<span class="tag air">Air</span></strong>
                             <input type="text" value="Coming Soon" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="contract soon">
@@ -602,13 +620,13 @@
                             <strong>Pisces<span class="tag water">Water</span></strong>
                             <input type="text" value="Coming Soon" readonly/>
                         </div>
-                        <div>
+                        <div class="contract_buttons">
                             <button onclick="copyContract(this);">
                                 <img src="/content/img/copy.svg" />
                             </button>
-                            <button onclick="openEtherscan(this);">
+                            <a href="" target="_blank">
                                 <img src="/content/img/etherscan.svg" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -667,17 +685,31 @@
                         <h4>Swap ETH for Zodiac Tokens</h4>
                         <p>
                             Visit Uniswap from the link below, connect wallet, enter amount and swap!
-                            <br />
-                            <a class="multi" href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x942B70b3a9BA9B17FA59Ca0328Bc5e78728A079A&use=V2" target="_blank">Aries Token on Uniswap</a>
-                            <a class="multi" href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x363428b78e5987647A6efab8F4B9E9E4cA0acE99&use=V2" target="_blank">Cancer Token on Uniswap</a>
-                            <a class="multi" href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x90555daB9AFFc5c404a6F45a7441737D71199aaE&use=V2" target="_blank">Libra Token on Uniswap</a>
-                            <a class="multi" href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x8B516015D21770cc5A37f6fC604794CfAC63F579&use=V2" target="_blank">Capricorn Token on Uniswap</a>
                         </p>
                     </li>
                 </ol>
-            </div>
-            <div class="dialog_footer">
-                <button onclick="closeDialog(this);">Got It</button>
+                <div id="div_buy_tokens">
+                    <a href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x942B70b3a9BA9B17FA59Ca0328Bc5e78728A079A&use=V2" target="_blank">
+                        <img src="/content/img/signs/aries.svg">
+                        <strong>Aries Token</strong>
+                        <span>on Uniswap</span>
+                    </a>
+                    <a class="multi" href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x363428b78e5987647A6efab8F4B9E9E4cA0acE99&use=V2" target="_blank">
+                        <img src="/content/img/signs/cancer.svg">
+                        <strong>Cancer Token</strong>
+                        <span>on Uniswap</span>
+                    </a>
+                    <a class="multi" href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x90555daB9AFFc5c404a6F45a7441737D71199aaE&use=V2" target="_blank">
+                        <img src="/content/img/signs/libra.svg">
+                        <strong>Libra Token</strong>
+                        <span>on Uniswap</span>
+                    </a>
+                    <a class="multi" href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x8B516015D21770cc5A37f6fC604794CfAC63F579&use=V2" target="_blank">
+                        <img src="/content/img/signs/capricorn.svg">
+                        <strong>Capricorn Token</strong>
+                        <span>on Uniswap</span>
+                    </a>
+                </div>
             </div>
         </div>
         <div id="dialog_buy_token" class="dialog">
@@ -705,14 +737,12 @@
                         <h4 id="buy_token_title"></h4>
                         <p>
                             Visit Uniswap from the link below, connect wallet, enter amount and swap!
-                            <br />
-                            <a id="buy_token_link" href="" target="_blank"></a>
                         </p>
                     </li>
                 </ol>
             </div>
             <div class="dialog_footer">
-                <button onclick="closeDialog(this);">Got It</button>
+                <a id="buy_token_link" href="" target="_blank"></a>
             </div>
         </div>
     </div>
@@ -739,9 +769,8 @@
     
     $(document).ready(function(){
         //Smooth Scroll Behavior
-        $("a").on('click', function(event) {
-
-        if (this.hash !== "") {
+        $('a').on('click', function(event) {
+        if (this.hash !== '' && this.href.split('#')[0] === window.location.href.split('#')[0]) {
             event.preventDefault();
 
             var hash = this.hash;
@@ -757,7 +786,7 @@
         //Header Scroll Behavior
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 70) {
+        if (scroll >= 60) {
             $('header').addClass('shadow');
         } else {
             $('header').removeClass('shadow');
@@ -802,7 +831,7 @@
             var sign = getSign(e.m);
             if (e.c > 0) {
                 $('#' + sign).css('order', i);
-                $('#' + sign).find('span.hint').text('Cap: ' + e.c);
+                $('#' + sign).find('span.hint').text('MCap: ' + e.c);
                 $('#' + sign).find('progress').val(e.p);
             } else {
                 $('#' + sign).css('order', 10 + i);
@@ -853,7 +882,9 @@
         $('#select_month').prop("selectedIndex", today.getMonth());
         setTimeout(function() { 
             $('#select_month').trigger('change');
+            $('#select_day').prop("selectedIndex", today.getDate()-1);
         }, 100);
+
         $('#select_month').on('change', function () {
             var month = this.value;
 
@@ -899,12 +930,11 @@
                     break;
             }
 
-            $('#select_day').prop("selectedIndex", today.getDate()-1);
-            $('#your_sign_name').text(getYourSign($('#select_month').val() + ('0' + $('#select_day').val()).slice(-2)));
+            getYourSign($('#select_month').val() + ('0' + $('#select_day').val()).slice(-2));
         });
 
         $('#select_day').on('change', function () {
-            $('#your_sign_name').text(getYourSign($('#select_month').val() + ('0' + $('#select_day').val()).slice(-2)));
+            getYourSign($('#select_month').val() + ('0' + $('#select_day').val()).slice(-2));
         });
     });
 
@@ -914,7 +944,7 @@
         $('#' + t_dialog).addClass('visible');
         $('html').addClass('no_scroll');
 
-        $('#buy_token_header').text('Buy ' + t_name);
+        $('#buy_token_header').text('Buy ' + t_name + ' Token');
         $('#buy_token_title').text('Swap ETH for ' + t_name);
         $('#buy_token_link').text(t_name + ' Token on Uniswap');
         $('#buy_token_link').attr('href', t_link);
@@ -932,10 +962,18 @@
         $('html').removeClass('no_scroll');
     }
 
+    $('.dialog_base').on('click', function(e) {
+        if (e.target.className.includes('dialog_base')) {
+            $(e.target).find('div.dialog').removeClass('visible');
+            $('.dialog_base').first().removeClass('visible');
+            $('html').removeClass('no_scroll');
+        }
+    });
+
     //Contract Functions
     function copyContract(e) {
         if ($(e).parent().parent().find('input').val() != 'Coming Soon') {
-            navigator.clipboard.writeText('https://etherscan.io/token/' + $(e).parent().parent().find('input').val());
+            navigator.clipboard.writeText($(e).parent().parent().find('input').val());
         } else {
             navigator.clipboard.writeText('Token is coming soon!');
         }
@@ -1001,6 +1039,10 @@
 
     //Populating Find Out Day Select
     function addDays(x) {
+        let d = 1;
+        if ($('#select_day').val() != undefined) {
+            d = $('#select_day').val();
+        }
         $('#select_day').find('option').remove();
         for(i = 1; i <= x; i++) {
             let day = document.createElement('option');
@@ -1008,52 +1050,91 @@
             day.text = i;
             $('#select_day').append(day);
         }
+
+        if (d > $('#select_day').find('option').last().val()) {
+            $('#select_day').val($('#select_day').find('option').last().val());
+        } else {
+            $('#select_day').val(d);
+        }
     }
 
     //Get Sign Function
     function getYourSign(x) {
+        let el = document.createElement('span');
+        el.className = 'tag';
+
         if (x >= 101 && x <= 119) {
             $('#your_sign_img').attr('src', '/content/img/signs/capricorn.svg');
-            return 'Capricorn';
+            $('#your_sign_name').text('Capricorn');
+            el.innerText = 'Earth';
+            el.className += ' earth';
         } else if (x >= 120 && x <= 218) {
             $('#your_sign_img').attr('src', '/content/img/signs/aquarius.svg');
-            return 'Aquarius';
+            $('#your_sign_name').text('Aquarius');
+            el.innerText = 'Air';
+            el.className += ' air';
         } else if (x >= 219 && x <= 320) {
             $('#your_sign_img').attr('src', '/content/img/signs/pisces.svg');
-            return 'Pisces';
+            $('#your_sign_name').text('Pisces');
+            el.innerText = 'Water';
+            el.className += ' water';
         } else if (x >= 321 && x <= 419) {
             $('#your_sign_img').attr('src', '/content/img/signs/aries.svg');
-            return 'Aries';
+            $('#your_sign_name').text('Aries');
+            el.innerText = 'Fire';
+            el.className += ' fire';
         } else if (x >= 420 && x<= 520) {
             $('#your_sign_img').attr('src', '/content/img/signs/taurus.svg');
-            return 'Taurus';
+            $('#your_sign_name').text('Taurus');
+            el.innerText = 'Earth';
+            el.className += ' earth';
         } else if (x >= 521 && x <= 621) {
             $('#your_sign_img').attr('src', '/content/img/signs/gemini.svg');
-            return 'Gemini';
+            $('#your_sign_name').text('Gemini');
+            el.innerText = 'Air';
+            el.className += ' air';
         } else if (x >= 622 && x <= 722) {
             $('#your_sign_img').attr('src', '/content/img/signs/cancer.svg');
-            return 'Cancer';
+            $('#your_sign_name').text('Cancer');
+            el.innerText = 'Water';
+            el.className += ' water';
         } else if (x >= 723 && x <= 822) {
             $('#your_sign_img').attr('src', '/content/img/signs/leo.svg');
-            return 'Leo';
+            $('#your_sign_name').text('Leo');
+            el.innerText = 'Fire';
+            el.className += ' fire';
         } else if (x >= 823 && x <= 922) {
             $('#your_sign_img').attr('src', '/content/img/signs/virgo.svg');
-            return 'Virgo';
+            $('#your_sign_name').text('Virgo');
+            el.innerText = 'Earth';
+            el.className += ' earth';
         } else if (x >= 923 && x <= 1022) {
             $('#your_sign_img').attr('src', '/content/img/signs/libra.svg');
-            return 'Libra';
+            $('#your_sign_name').text('Libra');
+            el.innerText = 'Air';
+            el.className += ' air';
         } else if (x >= 1023 && x <= 1122) {
             $('#your_sign_img').attr('src', '/content/img/signs/scorpio.svg');
-            return 'Scorpio';
+            $('#your_sign_name').text('Scorpio');
+            el.innerText = 'Water';
+            el.className += ' water';
         } else if (x >= 1123 && x<= 1221) {
             $('#your_sign_img').attr('src', '/content/img/signs/sagittarius.svg');
-            return 'Sagittarius';
+            $('#your_sign_name').text('Sagittarius');
+            el.innerText = 'Fire';
+            el.className += ' fire';
         } else if (x >= 1222 && x <= 1231) {
             $('#your_sign_img').attr('src', '/content/img/signs/capricorn.svg');
-            return 'Capricorn';
+            $('#your_sign_name').text('Capricorn');
+            el.innerText = 'Earth';
+            el.className += ' earth';
         } else {
+            $('#your_sign_name').text('Unknown');
+            el.innerText = 'N/A';
             return null;
         }
+
+        $('#your_sign_name').append(el);
     }
 </script>
 </body>

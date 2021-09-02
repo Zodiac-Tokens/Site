@@ -135,6 +135,32 @@ select {
   visibility: hidden;
 }
 
+span.tag {
+  padding: 2px 4px;
+  margin-left: 5px;
+  background-color: #001321;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
+
+span.tag.fire {
+  background-color: #d52f38;
+}
+
+span.tag.air {
+  background-color: #d8a927;
+}
+
+span.tag.earth {
+  background-color: #398d30;
+}
+
+span.tag.water {
+  background-color: #2b6fad;
+}
+
 .dialog_base {
   visibility: hidden;
   display: -webkit-box;
@@ -168,19 +194,15 @@ select {
 }
 
 .dialog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   display: none;
+  margin: 0 10px;
   padding: 5px 10px;
-  height: 100%;
-  max-height: 100%;
+  max-height: 85%;
   opacity: 0;
   background-color: #001d34;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
 }
@@ -213,6 +235,8 @@ select {
 }
 
 .dialog_body > ol {
+  margin-top: 5px;
+  margin-bottom: 5px;
   -webkit-padding-start: 25px;
           padding-inline-start: 25px;
 }
@@ -236,22 +260,42 @@ select {
   background-color: #002e53;
 }
 
-.dialog_body > ol a.multi {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
 .dialog_body > ol > li:not(:last-child) {
   margin-bottom: 15px;
 }
 
 .dialog_footer {
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
+.dialog_footer > a {
+  display: inline-block;
+  padding: 7px 15px;
+  background-color: #87b5d9;
+  border: 1px solid #87b5d9;
+  border-radius: 4px;
+  color: #001321;
+  text-decoration: none;
+  font-size: 1.25rem;
+  -webkit-transition: color 200ms, border-color 200ms, background-color 200ms;
+  transition: color 200ms, border-color 200ms, background-color 200ms;
+}
+
+.dialog_footer > a:hover, .dialog_footer > a:active {
+  background-color: #c6d8e6;
+  border-color: #c6d8e6;
+}
+
 .dialog.visible {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   opacity: 100%;
 }
 
@@ -321,19 +365,36 @@ header > div {
   padding: 0 10px;
 }
 
-header > div > img {
+header > div > a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+header > div > a > img {
   display: block;
   width: 40px;
   height: 40px;
 }
 
-header > div > h2 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+header > div > a > h2 {
   margin-left: 10px;
   margin-right: 10px;
   color: #c6d8e6;
+}
+
+header > div > div#nav_spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 header > div > nav {
@@ -407,8 +468,8 @@ button {
   border: 1px solid #87b5d9;
   border-radius: 4px;
   background-color: #87b5d9;
-  -webkit-transition: color 200ms, border-color 200ms, background-color 200ms, color 200ms;
-  transition: color 200ms, border-color 200ms, background-color 200ms, color 200ms;
+  -webkit-transition: color 200ms, border-color 200ms, background-color 200ms;
+  transition: color 200ms, border-color 200ms, background-color 200ms;
   cursor: pointer;
 }
 
@@ -569,7 +630,7 @@ section.hero .hero_img_elements > #hero_sun {
 }
 
 section.hero .hero_img_elements > #hero_moon {
-  top: 45%;
+  bottom: 20%;
   left: 9%;
   width: 90px;
   height: 90px;
@@ -589,7 +650,7 @@ section.hero .hero_content {
       flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  padding: 80px 10px 10px 10px;
+  padding: 60px 10px 10px 10px;
   max-width: 1300px;
   z-index: 10;
 }
@@ -609,6 +670,10 @@ section.hero .hero_content > div#div_hero > h1,
 section.hero .hero_content > div#div_hero > h2 {
   -webkit-filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.4));
           filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.4));
+}
+
+section.hero .hero_content > div#div_hero > h2 {
+  color: #decf90;
 }
 
 section.hero .hero_content > div#div_hero > div {
@@ -658,8 +723,8 @@ section.hero .hero_content > div#div_hero > div > a:first-child {
   border: 1px solid #f4f2c0;
   border-radius: 4px;
   background-color: #f4f2c0;
-  -webkit-transition: color 200ms, border-color 200ms, background-color 200ms, color 200ms;
-  transition: color 200ms, border-color 200ms, background-color 200ms, color 200ms;
+  -webkit-transition: color 200ms, border-color 200ms, background-color 200ms;
+  transition: color 200ms, border-color 200ms, background-color 200ms;
   cursor: pointer;
 }
 
@@ -695,6 +760,7 @@ div.token {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 2px;
 }
 
 div.token_img > img {
@@ -732,32 +798,6 @@ div.token_info > div > strong {
   font-weight: bold;
 }
 
-div.token_info > div > strong > span.tag {
-  padding: 2px 4px;
-  margin-left: 5px;
-  background-color: #001321;
-  color: white;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  vertical-align: middle;
-}
-
-div.token_info > div > strong > span.tag.fire {
-  background-color: #d52f38;
-}
-
-div.token_info > div > strong > span.tag.air {
-  background-color: #d8a927;
-}
-
-div.token_info > div > strong > span.tag.earth {
-  background-color: #398d30;
-}
-
-div.token_info > div > strong > span.tag.water {
-  background-color: #2b6fad;
-}
-
 div.token_info > div > span {
   text-align: right;
 }
@@ -786,7 +826,7 @@ div.token_info > progress[value]::-webkit-progress-value {
 }
 
 div.token.soon .token_img > img {
-  opacity: 0.5;
+  opacity: 0.35;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
@@ -820,7 +860,7 @@ div.token.soon .token_buy {
 .section > div {
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+  padding: 0 10px 30px 10px;
   max-width: 1300px;
 }
 
@@ -884,6 +924,7 @@ div#findout > div > h3 {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto auto auto auto auto;
       grid-template-rows: auto auto auto auto auto;
+  padding: 30px 0;
 }
 
 #div_points > #point1 {
@@ -944,11 +985,6 @@ div#findout > div > h3 {
 #div_points > div > img {
   width: 48px;
   height: 48px;
-}
-
-#div_points > div h4 {
-  margin: 5px 0;
-  color: #f4f2c0;
 }
 
 #div_points > div a {
@@ -1075,6 +1111,7 @@ div.contract {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 5px;
 }
 
 div.contract_img > img {
@@ -1097,32 +1134,6 @@ div.contract_info > strong {
   font-weight: bold;
 }
 
-div.contract_info > strong > span.tag {
-  padding: 2px 4px;
-  margin-left: 5px;
-  background-color: #001321;
-  color: white;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  vertical-align: middle;
-}
-
-div.contract_info > strong > span.tag.fire {
-  background-color: #d52f38;
-}
-
-div.contract_info > strong > span.tag.air {
-  background-color: #d8a927;
-}
-
-div.contract_info > strong > span.tag.earth {
-  background-color: #398d30;
-}
-
-div.contract_info > strong > span.tag.water {
-  background-color: #2b6fad;
-}
-
 div.contract_info > input {
   display: block;
   width: 100%;
@@ -1135,7 +1146,20 @@ div.contract_info > input {
   outline: none;
 }
 
-div.contract button {
+div.contract_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.contract_buttons > button {
   position: relative;
   background-color: #002746;
   border-color: #002746;
@@ -1144,27 +1168,27 @@ div.contract button {
   transition: all 200ms;
 }
 
-div.contract button:hover, div.contract button:active {
+div.contract_buttons > button:hover, div.contract_buttons > button:active {
   background-color: #002e53;
   border-color: #002e53;
 }
 
-div.contract button > img {
+div.contract_buttons > button > img {
   display: block;
   width: 28px;
   height: 28px;
 }
 
-div.contract button.done {
+div.contract_buttons > button.done {
   background-color: #f4f2c0;
   border-color: #f4f2c0;
 }
 
-div.contract button.done > img {
+div.contract_buttons > button.done > img {
   opacity: 0;
 }
 
-div.contract button.done::after {
+div.contract_buttons > button.done::after {
   content: '';
   position: absolute;
   top: 9px;
@@ -1177,8 +1201,31 @@ div.contract button.done::after {
           transform: rotate(45deg);
 }
 
+div.contract_buttons > a {
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  background-color: #002746;
+  border: 1px solid #002746;
+  border-radius: 4px;
+  padding: 8px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+div.contract_buttons > a:hover, div.contract_buttons > a:active {
+  background-color: #002e53;
+  border-color: #002e53;
+}
+
+div.contract_buttons > a > img {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
 div.contract.soon .contract_img > img {
-  opacity: 0.5;
+  opacity: 0.35;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
@@ -1187,7 +1234,8 @@ div.contract.soon .contract_info {
   opacity: 0.5;
 }
 
-div.contract.soon button {
+div.contract.soon button,
+div.contract.soon a {
   display: none;
 }
 
@@ -1195,8 +1243,13 @@ div.contract.soon button {
   text-align: center;
 }
 
+#footer > div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 #footer > div > h3 {
-  margin: 5px 0 10px 0;
+  margin: 10px 0 10px 0;
   color: #f4f2c0;
 }
 
@@ -1208,7 +1261,7 @@ div.contract.soon button {
       grid-template-columns: 25% 25% 25% 25%;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  padding: 20px 0;
+  padding: 5px 0 10px 0;
   max-width: 600px;
 }
 
@@ -1235,11 +1288,54 @@ div.contract.soon button {
   background-color: rgba(135, 181, 217, 0.25);
 }
 
-@supports ((-webkit-backdrop-filter: blur(30px)) or (backdrop-filter: blur(30px))) {
+#div_buy_tokens {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  padding-bottom: 5px;
+}
+
+#div_buy_tokens > a {
+  display: block;
+  padding: 10px 5px;
+  color: #c6d8e6;
+  border-radius: 4px;
+  background-color: #002e53;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+
+#div_buy_tokens > a > img {
+  display: block;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+}
+
+#div_buy_tokens > a > strong {
+  display: block;
+  margin-top: 10px;
+}
+
+#div_buy_tokens > a > span {
+  display: block;
+  font-size: 0.75rem;
+  color: #87b5d9;
+}
+
+#div_buy_tokens > a:hover, #div_buy_tokens > a:active {
+  background-color: rgba(135, 181, 217, 0.25);
+}
+
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
   header.shadow {
-    background-color: rgba(0, 19, 33, 0.1);
-    -webkit-backdrop-filter: blur(30px);
-            backdrop-filter: blur(30px);
+    background-color: rgba(0, 19, 33, 0.25);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
     -webkit-transition: -webkit-backdrop-filter 200ms;
     transition: -webkit-backdrop-filter 200ms;
     transition: backdrop-filter 200ms;
@@ -1270,21 +1366,17 @@ div.contract.soon button {
     padding-top: 60px;
   }
   .dialog {
-    max-width: 600px;
-    height: auto;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    max-width: 800px;
   }
   .dialog_header > h3 {
     margin: 5px 0;
   }
-  header > div > img {
+  header > div a > img {
     margin: 10px 0;
     width: 60px;
     height: 60px;
   }
-  header > div > h2 {
+  header > div a > h2 {
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -1299,7 +1391,7 @@ div.contract.soon button {
     height: 100vh;
   }
   section.hero > .hero_img_elements {
-    height: 100vh;
+    height: 100%;
   }
   section.hero > .hero_img_elements > #hero_aries {
     top: 12%;
@@ -1381,8 +1473,8 @@ div.contract.soon button {
     z-index: 2;
   }
   section.hero > .hero_img_elements > #hero_moon {
-    top: 55%;
-    left: 9%;
+    bottom: 23%;
+    left: 7%;
     width: 160px;
     height: 160px;
     z-index: 3;
@@ -1390,7 +1482,7 @@ div.contract.soon button {
   section.hero > .hero_content {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    padding-top: 120px;
+    padding-top: 100px;
   }
   section.hero > .hero_content > div#div_hero {
     -webkit-box-flex: 0;
@@ -1513,7 +1605,13 @@ div.contract.soon button {
   #div_contracts > div:nth-child(2) {
     padding-left: 10px;
   }
-  #footer > div > div a {
+  #footer > div > h3 {
+    margin-top: 15px;
+  }
+  #footer > div > div {
+    padding: 10px 0 20px 0;
+  }
+  #footer > div > div > a {
     font-size: 1rem;
   }
 }
