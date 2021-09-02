@@ -1,0 +1,66 @@
+@font-face {
+	font-family: Cinzel;
+	font-weight: 500;
+	font-weight: bold;
+	src: url('/fonts/Cinzel-Medium.ttf');
+	src: url('/fonts/Cinzel-Medium.ttf?#FooAnything') format('embedded-opentype'),
+		url('/fonts/Cinzel-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: Cinzel;
+	font-weight: 400;
+	font-weight: normal;
+	src: url('/fonts/Cinzel-Regular.ttf');
+	src: url('/fonts/Cinzel-Regular.ttf?#FooAnything') format('embedded-opentype'),
+		url('/fonts/Cinzel-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: Cinzel;
+	font-weight: 600;
+	font-weight: bolder;
+	src: url('/fonts/Cinzel-SemiBold.ttf');
+	src: url('/fonts/Cinzel-SemiBold.ttf?#FooAnything') format('embedded-opentype'),
+		url('/fonts/Cinzel-SemiBold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: Montserrat;
+	font-weight: 500;
+	font-weight: bold;
+	src: url('/fonts/Montserrat-Medium.ttf');
+	src: url('/fonts/Montserrat-Medium.ttf?#FooAnything') format('embedded-opentype'),
+		url('/fonts/Montserrat-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: Montserrat;
+	font-weight: 400;
+	font-weight: normal;
+	src: url('/fonts/Montserrat-Regular.ttf');
+	src: url('/fonts/Montserrat-Regular.ttf?#FooAnything') format('embedded-opentype'),
+		url('/fonts/Montserrat-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+html,
+body,
+span,
+p,
+input,
+a,
+textarea,
+select,
+button {
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol {
+	font-family: Cinzel, 'Times New Roman', Times, serif;
+}

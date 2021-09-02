@@ -1,0 +1,45 @@
+$background: #001321;
+$section: #001d34;
+$section_alt: #002746;
+$elevated: #002e53;
+$accent: #f4f2c0;
+$accent_dark: #decf90;
+$body: #c6d8e6;
+$hint: #87b5d9;
+
+$shadow-z1: 0 4px 16px rgba(0, 0, 0, 0.3);
+$shadow-z2: 0 8px 32px rgba(0, 0, 0, 0.25);
+$shadow-text: 0 1px 0 rgba(0, 0, 0, 0.4);
+
+@mixin button_fill ($color: $background, $base: $hint, $hover: $body) {
+	font-size: 1.25rem;
+	padding: 7px 15px;
+	color: $color;
+	border: 1px solid $base;
+	border-radius: 4px;
+	background-color: $base;
+	transition: color 200ms, border-color 200ms, background-color 200ms, color 200ms;
+	cursor: pointer;
+
+	&:hover {
+		border-color: $hover;
+		background-color: $hover;
+	}
+}
+
+@mixin button_outline ($base: $body, $border: $hint, $hover: $body) {
+	font-size: 1.25rem;
+	padding: 7px 15px;
+	color: $base;
+	border: 1px solid $border;
+	border-radius: 4px;
+	background-color: rgba($background, 0.5);
+	transition: border-color 200ms, background-color 200ms, color 200ms;
+	cursor: pointer;
+
+	&:hover {
+		color: $background;
+		border-color: $hover;
+		background-color: $hover;
+	}
+}
